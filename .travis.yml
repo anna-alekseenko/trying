@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 11.13.0
+script:
+  - npm install --global workbox-cli
+  - workbox generateSW workbox-config.js
+deploy:
+  - provider: heroku
+    skip_cleanup: true
+    api_key: $ACCESS_KEY_ID
+    app: annalieks-staging
+    on:
+      branch: develop
+  - provider: heroku
+    skip_cleanup: true
+    api_key: $ACCESS_KEY_ID
+    app: annalieks-production
+    on:
+      branch: master

@@ -151,6 +151,10 @@ i {
 	transform: scale(1.005);
 }
 
+#education-list {
+	margin-top: -0.7em;
+}
+
 #education-list li {
 	padding: 0.5em;
 }
@@ -177,5 +181,9 @@ i {
 }
 
 .timeline {
-	padding-top: 1em;
+	padding-top: 0.7em;
+}
+
+.nested-list {
+	margin-top: 0.5em;
 }
